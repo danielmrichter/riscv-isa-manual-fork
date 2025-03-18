@@ -2297,7 +2297,7 @@ coherent with store instructions that modify PTEs.
 == "Svukte" Extension for Address-Independent Latency of User-Mode Faults to Supervisor Addresses, Version 0.4
 
 The Svukte extension provides a means to make user-mode accesses to supervisor
-memory raise page faults with timing independent of the address-translation
+memory raise page faults with timing that is independent of the address-translation
 configuration and page-table contents, thereby mitigating attacks that attempt
 to discover the supervisor software's address-space layout.
 
@@ -2306,7 +2306,7 @@ If the hypervisor extension is additionally implemented, the `hstatus`.HUKTE
 field is also writable.
 See <<sec:senvcfg>> and <<sec:hstatus>> for the definitions of those fields.
 
-The Svukte extension depends on Sv39.
+The Svukte extension depends on the Sv39 extension.
 
 NOTE: Svukte is not defined for Sv32 because the small address space limits the
 available entropy, reducing the effectiveness of address-space layout
